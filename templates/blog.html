@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog | Be The Light Foundation</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background: linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.75)),
+    url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1600&q=80');
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+    color:white;
+}
+
+/* HEADER */
+.header{
+    text-align:center;
+    padding:70px 20px 40px;
+}
+
+.header h1{
+    font-size:3rem;
+    color:#FFD700;
+}
+
+.header p{
+    font-size:1.1rem;
+    opacity:0.9;
+}
+
+/* BLOG GRID */
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+    padding-bottom:60px;
+}
+
+/* CARD */
+.card{
+    background:rgba(255,255,255,.10);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,.2);
+    border-radius:18px;
+    overflow:hidden;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+    background:rgba(255,255,255,.15);
+}
+
+.card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:20px;
+}
+
+.card h2{
+    font-size:1.2rem;
+    color:#FFD700;
+    margin-bottom:10px;
+}
+
+.card p{
+    font-size:0.95rem;
+    line-height:1.6;
+    opacity:0.9;
+}
+
+.date{
+    font-size:0.8rem;
+    opacity:0.7;
+    margin-bottom:10px;
+}
+
+/* BUTTON */
+.btn{
+    display:inline-block;
+    margin-top:15px;
+    padding:10px 18px;
+    background:#FFD700;
+    color:black;
+    text-decoration:none;
+    border-radius:25px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:white;
+}
+
+/* EXPANDED CONTENT */
+.more{
+    display:none;
+    margin-top:15px;
+    font-size:0.9rem;
+    line-height:1.6;
+    opacity:0.95;
+}
+
+/* BACK */
+.back{
+    text-align:center;
+    margin-top:20px;
+}
+
+.back a{
+    background:#FFD700;
+    color:black;
+    text-decoration:none;
+    padding:12px 30px;
+    border-radius:50px;
+    font-weight:bold;
+}
+
+/* FOOTER */
+.footer{
+    text-align:center;
+    padding:20px;
+    background:rgba(0,0,0,.4);
+    margin-top:40px;
+}
+
+@media(max-width:768px){
+    .header h1{
+        font-size:2.2rem;
+    }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="header">
+    <h1>Our Blog</h1>
+    <p>Stories of impact, empowerment, and uplifting communities</p>
+</div>
+
+<div class="container">
+
+    <!-- CARD 1 -->
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1509099836639-18ba1795216d">
+        <div class="card-content">
+            <div class="date">June 2026</div>
+            <h2>Community Empowerment Trends</h2>
+            <p>
+                Communities are shifting from dependency to empowerment through education and leadership.
+            </p>
+
+            <span class="btn" onclick="toggle('m1')">Read More</span>
+
+            <div class="more" id="m1">
+                Be The Light Foundation focuses on long-term impact by teaching skills, supporting youth programs, and encouraging self-reliance in communities.
+            </div>
+        </div>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216">
+        <div class="card-content">
+            <div class="date">2026 Insight</div>
+            <h2>Volunteer Movements Rising</h2>
+            <p>
+                Volunteering is becoming a global movement of compassion and action.
+            </p>
+
+            <span class="btn" onclick="toggle('m2')">Read More</span>
+
+            <div class="more" id="m2">
+                More people are joining NGOs like Be The Light Foundation to donate time, skills, and energy to uplift communities.
+            </div>
+        </div>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644">
+        <div class="card-content">
+            <div class="date">NGO Trend 2026</div>
+            <h2>Digital Transformation in NGOs</h2>
+            <p>
+                NGOs are using technology to reach more people and improve transparency.
+            </p>
+
+            <span class="btn" onclick="toggle('m3')">Read More</span>
+
+            <div class="more" id="m3">
+                Digital tools like websites, social media, and data systems are helping NGOs track impact and communicate better with donors and communities.
+            </div>
+        </div>
+    </div>
+
+    <!-- CARD 4 -->
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
+        <div class="card-content">
+            <div class="date">Hope & Impact</div>
+            <h2>Small Acts, Big Change</h2>
+            <p>
+                Even small acts of kindness can transform lives.
+            </p>
+
+            <span class="btn" onclick="toggle('m4')">Read More</span>
+
+            <div class="more" id="m4">
+                A simple act of kindness can create a ripple effect, inspiring entire communities to support one another and grow together.
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="back">
+    <a href="/dashboard">
+        <i class="fas fa-arrow-left"></i> Back to Dashboard
+    </a>
+</div>
+
+<div class="footer">
+    © 2026 Be The Light Foundation | Spreading Hope Through Action
+</div>
+
+<script>
+function toggle(id){
+    var el = document.getElementById(id);
+    if(el.style.display === "block"){
+        el.style.display = "none";
+    }else{
+        el.style.display = "block";
+    }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Register | Be The Light Foundation</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+body{
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:30px;
+background:
+linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1600&q=80');
+background-size:cover;
+background-position:center;
+}
+
+.container{
+width:450px;
+padding:40px;
+border-radius:20px;
+background:rgba(255,255,255,.12);
+backdrop-filter:blur(15px);
+border:1px solid rgba(255,255,255,.2);
+box-shadow:0 8px 32px rgba(0,0,0,.4);
+color:white;
+}
+
+.logo{
+text-align:center;
+margin-bottom:25px;
+}
+
+.logo h1{
+color:#FFD700;
+font-size:30px;
+}
+
+.logo p{
+font-size:14px;
+color:#ddd;
+}
+
+.input-box{
+position:relative;
+margin:15px 0;
+}
+
+.input-box input{
+width:100%;
+padding:15px 45px;
+border:none;
+outline:none;
+border-radius:50px;
+background:rgba(255,255,255,.2);
+color:white;
+font-size:15px;
+}
+
+.input-box input::placeholder{
+color:#eee;
+}
+
+.input-box i{
+position:absolute;
+left:18px;
+top:16px;
+color:white;
+}
+
+.btn{
+width:100%;
+padding:15px;
+border:none;
+border-radius:50px;
+background:#FFD700;
+color:black;
+font-weight:bold;
+font-size:17px;
+cursor:pointer;
+transition:.4s;
+margin-top:10px;
+}
+
+.btn:hover{
+background:white;
+transform:translateY(-3px);
+}
+
+.links{
+text-align:center;
+margin-top:20px;
+}
+
+.links a{
+color:#FFD700;
+text-decoration:none;
+}
+
+.links a:hover{
+text-decoration:underline;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="logo">
+<h1>BE THE LIGHT</h1>
+<p>Uplifting Others, Reaching Higher</p>
+</div>
+
+<form action="/register" method="POST">
+
+<div class="input-box">
+<i class="fas fa-user"></i>
+<input type="text" name="username"
+placeholder="Username" required>
+</div>
+
+<div class="input-box">
+<i class="fas fa-envelope"></i>
+<input type="email" name="email"
+placeholder="Email Address" required>
+</div>
+
+<div class="input-box">
+<i class="fas fa-lock"></i>
+<input type="password" name="password"
+placeholder="Password" required>
+</div>
+
+<div class="input-box">
+<i class="fas fa-lock"></i>
+<input type="password" name="confirm_password"
+placeholder="Confirm Password" required>
+</div>
+
+<button type="submit" class="btn">
+Create Account
+</button>
+
+<div class="links">
+<p>
+Already have an account?
+<a href="{{ url_for('login') }}">
+Login
+</a>
+</p>
+</div>
+
+</form>
+
+</div>
+
+</body>
+</html>
+
+

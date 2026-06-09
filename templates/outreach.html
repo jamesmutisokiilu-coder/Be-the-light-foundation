@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Community Outreach & Relief | Be The Light Foundation</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background: linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.85)),
+    url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1600&q=80');
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+    color:white;
+}
+
+/* HEADER */
+.header{
+    text-align:center;
+    padding:70px 20px 30px;
+}
+
+.header h1{
+    font-size:3rem;
+    color:#FFD700;
+}
+
+.header p{
+    opacity:0.85;
+    margin-top:10px;
+}
+
+/* CONTAINER */
+.container{
+    width:90%;
+    max-width:1100px;
+    margin:auto;
+    padding-bottom:60px;
+}
+
+/* HERO */
+.hero{
+    background:rgba(255,215,0,0.12);
+    border:1px solid rgba(255,215,0,0.4);
+    padding:25px;
+    border-radius:18px;
+    margin-bottom:25px;
+    backdrop-filter:blur(10px);
+}
+
+.hero h2{
+    color:#FFD700;
+    margin-bottom:10px;
+}
+
+/* GRID */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
+}
+
+/* CARD */
+.card{
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,215,0,0.3);
+    border-radius:18px;
+    overflow:hidden;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+    background:rgba(255,255,255,.12);
+}
+
+.card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:20px;
+}
+
+.card h3{
+    color:#FFD700;
+    margin-bottom:10px;
+}
+
+.card p{
+    font-size:0.95rem;
+    line-height:1.6;
+    opacity:0.9;
+}
+
+/* ICON */
+.card i{
+    color:#FFD700;
+    margin-right:8px;
+}
+
+/* HIGHLIGHT BOX */
+.highlight{
+    margin-top:30px;
+    background:rgba(255,215,0,0.12);
+    border:1px solid rgba(255,215,0,0.4);
+    padding:25px;
+    border-radius:18px;
+}
+
+.highlight h2{
+    color:#FFD700;
+    margin-bottom:10px;
+}
+
+/* BACK */
+.back{
+    text-align:center;
+    margin-top:30px;
+}
+
+.back a{
+    background:#FFD700;
+    color:black;
+    text-decoration:none;
+    padding:12px 30px;
+    border-radius:50px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.back a:hover{
+    background:white;
+}
+
+/* FOOTER */
+.footer{
+    text-align:center;
+    padding:20px;
+    background:rgba(0,0,0,.6);
+    margin-top:40px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    .header h1{
+        font-size:2.2rem;
+    }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="header">
+    <h1>Community Outreach & Relief</h1>
+    <p>Bringing hope, dignity, and support to vulnerable communities</p>
+</div>
+
+<div class="container">
+
+    <!-- HERO -->
+    <div class="hero">
+        <h2><i class="fas fa-hands-helping"></i> Our Mission in Action</h2>
+        <p>
+            Be The Light Foundation is dedicated to supporting families in need through food drives,
+            emergency relief, and compassionate care. We believe no one should be left behind.
+        </p>
+    </div>
+
+    <!-- GRID -->
+    <div class="grid">
+
+        <!-- FOOD -->
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1604908554162-45f09b2e1a1f">
+            <div class="card-content">
+                <h3><i class="fas fa-utensils"></i> Food & Hygiene Drives</h3>
+                <p>
+                    We distribute food packages and hygiene kits to underprivileged families to ensure
+                    basic needs are met with dignity and care.
+                </p>
+            </div>
+        </div>
+
+        <!-- CLOTHING -->
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1520975928316-56b1d9b0b4f2">
+            <div class="card-content">
+                <h3><i class="fas fa-tshirt"></i> Clothing & Shelter Support</h3>
+                <p>
+                    We provide clothes, blankets, and temporary shelter to families affected by disasters
+                    or extreme hardship.
+                </p>
+            </div>
+        </div>
+
+        <!-- HEALTH -->
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1584515933487-779824d29309">
+            <div class="card-content">
+                <h3><i class="fas fa-hospital"></i> Hospital & Elderly Care</h3>
+                <p>
+                    We visit hospitals and elderly homes, offering emotional support, basic care items,
+                    and companionship to those in need.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- IMPACT BOX -->
+    <div class="highlight">
+        <h2><i class="fas fa-star"></i> Why Outreach Matters</h2>
+        <p>
+            Every act of kindness creates a ripple of hope. Through outreach, we restore dignity,
+            strengthen communities, and remind people that they are not alone.
+        </p>
+    </div>
+
+</div>
+
+<div class="back">
+    <a href="/dashboard">
+        <i class="fas fa-arrow-left"></i> Back to Dashboard
+    </a>
+</div>
+
+<div class="footer">
+    © 2026 Be The Light Foundation | Serving Humanity with Love
+</div>
+
+</body>
+</html>

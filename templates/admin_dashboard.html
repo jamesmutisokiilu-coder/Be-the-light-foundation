@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Admin Dashboard | Be The Light Foundation</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family:Segoe UI;
+    background:#0f0f0f;
+    color:white;
+}
+
+/* HEADER */
+header{
+    background:#00e5ff;
+    padding:18px;
+    color:black;
+    font-weight:bold;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logout{
+    background:white;
+    padding:8px 15px;
+    border-radius:20px;
+    text-decoration:none;
+    color:black;
+    font-weight:bold;
+}
+
+/* CONTAINER */
+.container{
+    width:95%;
+    margin:auto;
+    padding:20px;
+}
+
+/* SECTION BOX */
+.box{
+    background:rgba(255,255,255,.06);
+    padding:20px;
+    border-radius:12px;
+    margin-top:20px;
+    overflow-x:auto;
+}
+
+/* TITLES */
+h2{
+    color:#00e5ff;
+    margin-bottom:15px;
+}
+
+/* TABLE */
+table{
+    width:100%;
+    border-collapse:collapse;
+    min-width:800px;
+}
+
+th, td{
+    padding:12px;
+    border:1px solid #333;
+    text-align:left;
+    vertical-align:top;
+}
+
+th{
+    background:#00e5ff;
+    color:black;
+}
+
+tr:hover{
+    background:rgba(255,255,255,.05);
+}
+
+/* MESSAGE BOX */
+.msg{
+    max-width:300px;
+    word-wrap:break-word;
+}
+
+/* PHONE STYLE */
+.phone{
+    color:#00e5ff;
+    font-weight:bold;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:20px;
+    background:black;
+    margin-top:30px;
+    border-top:1px solid #222;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+    <div>ADMIN DASHBOARD - Be The Light Foundation</div>
+    <a class="logout" href="/admin-logout">Logout</a>
+</header>
+
+<div class="container">
+
+    <!-- REGISTERED USERS -->
+    <div class="box">
+
+        <h2>Registered Users</h2>
+
+        <table>
+
+            <tr>
+                <th>ID</th>
+                <th>Full Name</th>
+                <th>Email</th>
+            </tr>
+
+            {% for user in users %}
+            <tr>
+                <td>{{ user.id }}</td>
+                <td>{{ user.username }}</td>
+                <td>{{ user.email }}</td>
+            </tr>
+            {% endfor %}
+
+        </table>
+
+    </div>
+
+    <!-- MESSAGES -->
+    <div class="box">
+
+        <h2>Received Messages</h2>
+
+        <table>
+
+            <tr>
+                <th>ID</th>
+                <th>Full Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Message</th>
+            </tr>
+
+            {% for msg in messages %}
+            <tr>
+                <td>{{ msg.id }}</td>
+                <td>{{ msg.name }}</td>
+                <td>{{ msg.email }}</td>
+                <td class="phone">{{ msg.phone }}</td>
+                <td class="msg">{{ msg.content }}</td>
+            </tr>
+            {% endfor %}
+
+        </table>
+
+    </div>
+
+</div>
+
+<footer>
+    © 2026 Be The Light Foundation | Admin Control Panel
+</footer>
+
+</body>
+</html>

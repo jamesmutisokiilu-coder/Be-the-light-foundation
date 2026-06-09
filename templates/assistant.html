@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Assistant | Be The Light Foundation</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background: linear-gradient(rgba(0,0,0,.85),rgba(0,0,0,.85)),
+    url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1600&q=80');
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+    color:white;
+}
+
+/* HEADER */
+.header{
+    text-align:center;
+    padding:70px 20px 20px;
+}
+
+.header h1{
+    font-size:3rem;
+    color:#00e5ff;
+}
+
+.header p{
+    opacity:0.85;
+    margin-top:10px;
+}
+
+/* CONTAINER */
+.container{
+    width:90%;
+    max-width:900px;
+    margin:auto;
+    padding-bottom:60px;
+}
+
+/* SUPPORT BOX */
+.box{
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,.2);
+    border-radius:18px;
+    padding:25px;
+    margin-top:30px;
+}
+
+/* FORM */
+input, textarea{
+    width:100%;
+    padding:14px;
+    margin-top:12px;
+    border:none;
+    border-radius:10px;
+    outline:none;
+    font-size:14px;
+}
+
+textarea{
+    height:130px;
+    resize:none;
+}
+
+/* BUTTON */
+.btn{
+    width:100%;
+    margin-top:15px;
+    padding:12px;
+    background:#00e5ff;
+    border:none;
+    border-radius:25px;
+    font-weight:bold;
+    cursor:pointer;
+    font-size:16px;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:white;
+}
+
+/* SUPPORT INFO GRID */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:15px;
+    margin-top:20px;
+}
+
+.card{
+    background:rgba(255,255,255,.06);
+    padding:15px;
+    border-radius:12px;
+    text-align:center;
+    border:1px solid rgba(255,255,255,.1);
+}
+
+.card i{
+    color:#00e5ff;
+    font-size:25px;
+    margin-bottom:10px;
+}
+
+.card h3{
+    color:#00e5ff;
+}
+
+/* LINKS */
+.card a{
+    color:#00e5ff;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.card a:hover{
+    color:white;
+}
+
+/* BACK */
+.back{
+    text-align:center;
+    margin-top:30px;
+}
+
+.back a{
+    background:#00e5ff;
+    color:black;
+    text-decoration:none;
+    padding:12px 30px;
+    border-radius:50px;
+    font-weight:bold;
+}
+
+/* FOOTER */
+.footer{
+    text-align:center;
+    padding:20px;
+    background:#000;
+    border-top:1px solid #222;
+    margin-top:40px;
+}
+
+@media(max-width:768px){
+    .header h1{
+        font-size:2.2rem;
+    }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="header">
+    <h1>Assistant Support Center</h1>
+    <p>We are here to help, guide, and support you anytime</p>
+</div>
+
+<div class="container">
+
+    <!-- QUICK CONTACT INFO -->
+    <div class="grid">
+
+        <div class="card">
+            <i class="fas fa-phone"></i>
+            <h3>Call</h3>
+            <p>
+                <a href="tel:+254713222543">+254 713 222543</a>
+            </p>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-envelope"></i>
+            <h3>Email</h3>
+            <p>
+                <a href="mailto:info@bethelightfoundation.org">
+                    info@bethelightfoundation.org
+                </a>
+            </p>
+        </div>
+
+        <div class="card">
+            <i class="fab fa-whatsapp"></i>
+            <h3>WhatsApp</h3>
+            <p>
+                <a href="https://wa.me/254713222543" target="_blank">
+                    Chat on WhatsApp
+                </a>
+            </p>
+        </div>
+
+    </div>
+
+    <!-- MESSAGE FORM -->
+    <div class="box">
+
+        <h2 style="color:#00e5ff; text-align:center;">
+            <i class="fas fa-comments"></i> Send Us a Message
+        </h2>
+
+        <form method="POST" action="/send-message">
+
+            <input type="text" name="name" placeholder="Full Name" required>
+
+            <input type="email" name="email" placeholder="Email Address" required>
+
+            <input type="tel" name="phone"
+                   placeholder="Phone Number (+254 713 222543)"
+                   pattern="^\+?[0-9]{10,15}$"
+                   required>
+
+            <textarea name="message" placeholder="Write your message..." required></textarea>
+
+            <button type="submit" class="btn">
+                Send Message
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+<div class="back">
+    <a href="/dashboard">
+        <i class="fas fa-arrow-left"></i> Back to Dashboard
+    </a>
+</div>
+
+<div class="footer">
+    © 2026 Be The Light Foundation | Always Here to Support You
+</div>
+
+</body>
+</html>

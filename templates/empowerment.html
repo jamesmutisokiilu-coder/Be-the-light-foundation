@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Youth Empowerment | Be The Light Foundation</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background: radial-gradient(circle at top, #111 0%, #000 100%);
+    color:white;
+}
+
+/* HEADER */
+.header{
+    text-align:center;
+    padding:70px 20px 30px;
+}
+
+.header h1{
+    font-size:3rem;
+    color:#00ff99;
+    letter-spacing:1px;
+}
+
+.header p{
+    opacity:0.8;
+    margin-top:10px;
+}
+
+/* MAIN WRAPPER */
+.wrapper{
+    width:90%;
+    max-width:1100px;
+    margin:auto;
+    padding-bottom:60px;
+}
+
+/* HERO STRIP */
+.hero{
+    background:linear-gradient(90deg,#00ff99,#00bcd4);
+    padding:25px;
+    border-radius:15px;
+    color:black;
+    margin-bottom:30px;
+}
+
+.hero h2{
+    margin-bottom:10px;
+}
+
+/* TIMELINE STYLE */
+.timeline{
+    position:relative;
+    margin-top:20px;
+}
+
+.timeline::before{
+    content:'';
+    position:absolute;
+    left:20px;
+    top:0;
+    width:3px;
+    height:100%;
+    background:#00ff99;
+}
+
+.item{
+    position:relative;
+    margin-left:60px;
+    margin-bottom:30px;
+    background:#111;
+    padding:20px;
+    border-left:4px solid #00ff99;
+    border-radius:10px;
+    transition:.3s;
+}
+
+.item:hover{
+    transform:translateX(5px);
+    background:#1a1a1a;
+}
+
+.dot{
+    position:absolute;
+    left:-42px;
+    top:20px;
+    width:18px;
+    height:18px;
+    background:#00ff99;
+    border-radius:50%;
+    border:3px solid black;
+}
+
+/* ICON */
+.item i{
+    color:#00ff99;
+    margin-right:10px;
+    font-size:20px;
+}
+
+/* TITLE */
+.item h3{
+    color:#00ff99;
+    margin-bottom:10px;
+}
+
+/* TEXT */
+.item p{
+    opacity:0.85;
+    line-height:1.6;
+}
+
+/* IMAGE BANNER */
+.banner{
+    margin-top:40px;
+    border-radius:15px;
+    overflow:hidden;
+    border:2px solid #00ff99;
+}
+
+.banner img{
+    width:100%;
+    height:320px;
+    object-fit:cover;
+}
+
+/* BACK BUTTON */
+.back{
+    text-align:center;
+    margin-top:30px;
+}
+
+.back a{
+    background:#00ff99;
+    color:black;
+    text-decoration:none;
+    padding:12px 30px;
+    border-radius:50px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.back a:hover{
+    background:white;
+}
+
+/* FOOTER */
+.footer{
+    text-align:center;
+    padding:20px;
+    background:#000;
+    border-top:1px solid #222;
+    margin-top:40px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    .header h1{
+        font-size:2.2rem;
+    }
+
+    .item{
+        margin-left:40px;
+    }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="header">
+    <h1>Youth Empowerment</h1>
+    <p>Shaping confident leaders, innovators, and changemakers</p>
+</div>
+
+<div class="wrapper">
+
+    <div class="hero">
+        <h2><i class="fas fa-bolt"></i> Empowerment Focus Areas</h2>
+        <p>
+            We invest in young people by giving them direction, skills, mentorship, and opportunities
+            to unlock their full potential and transform their communities.
+        </p>
+    </div>
+
+    <div class="timeline">
+
+        <!-- ITEM 1 -->
+        <div class="item">
+            <div class="dot"></div>
+            <h3><i class="fas fa-user-friends"></i> Mentorship & Coaching</h3>
+            <p>
+                One-on-one and group mentorship sessions that help youth build confidence,
+                set goals, and make informed life decisions.
+            </p>
+        </div>
+
+        <!-- ITEM 2 -->
+        <div class="item">
+            <div class="dot"></div>
+            <h3><i class="fas fa-route"></i> Career Guidance</h3>
+            <p>
+                We guide young people in choosing careers based on skills, passion,
+                and real-world opportunities in today’s job market.
+            </p>
+        </div>
+
+        <!-- ITEM 3 -->
+        <div class="item">
+            <div class="dot"></div>
+            <h3><i class="fas fa-crown"></i> Leadership Development</h3>
+            <p>
+                Training programs that build strong leaders with communication,
+                teamwork, and problem-solving skills.
+            </p>
+        </div>
+
+        <!-- ITEM 4 -->
+        <div class="item">
+            <div class="dot"></div>
+            <h3><i class="fas fa-rocket"></i> Entrepreneurship Support</h3>
+            <p>
+                We help youth turn ideas into businesses through startup training,
+                innovation support, and funding guidance.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="banner">
+        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1600&q=80">
+    </div>
+
+</div>
+
+<div class="back">
+    <a href="/dashboard">
+        <i class="fas fa-arrow-left"></i> Back to Dashboard
+    </a>
+</div>
+
+<div class="footer">
+    © 2026 Be The Light Foundation | Empowering the Future Generation
+</div>
+
+</body>
+</html>

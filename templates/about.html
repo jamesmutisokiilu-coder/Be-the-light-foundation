@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us | Be The Light Foundation</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background: linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.75)),
+    url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1600&q=80');
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+    color:white;
+}
+
+/* HEADER */
+.header{
+    text-align:center;
+    padding:70px 20px 40px;
+}
+
+.header h1{
+    font-size:3rem;
+    color:#FFD700;
+    margin-bottom:10px;
+}
+
+.header p{
+    font-size:1.2rem;
+    opacity:0.9;
+}
+
+/* CONTAINER */
+.container{
+    width:90%;
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1fr;
+    gap:25px;
+    padding-bottom:60px;
+}
+
+/* CARD STYLE */
+.card{
+    background:rgba(255,255,255,.10);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,.2);
+    border-radius:20px;
+    padding:30px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    background:rgba(255,255,255,.15);
+}
+
+/* TITLES */
+.card h2{
+    color:#FFD700;
+    margin-bottom:15px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+/* TEXT */
+.card p{
+    line-height:1.8;
+    font-size:1.05rem;
+    opacity:0.95;
+}
+
+/* ICON BOX */
+.icon{
+    font-size:22px;
+    color:#FFD700;
+}
+
+/* BACK BUTTON */
+.back{
+    text-align:center;
+    margin-top:30px;
+}
+
+.back a{
+    background:#FFD700;
+    color:black;
+    text-decoration:none;
+    padding:12px 30px;
+    border-radius:50px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.back a:hover{
+    background:white;
+}
+
+/* FOOTER */
+.footer{
+    text-align:center;
+    padding:20px;
+    background:rgba(0,0,0,.4);
+    margin-top:40px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    .header h1{
+        font-size:2.2rem;
+    }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="header">
+    <h1>About Us</h1>
+    <p>Be The Light Foundation — Uplifting Lives, Spreading Hope</p>
+</div>
+
+<div class="container">
+
+    <!-- ABOUT -->
+    <div class="card">
+        <h2><i class="fas fa-circle-info icon"></i> About Us</h2>
+        <p>
+            Be The Light Foundation is a non-profit, community-driven initiative dedicated to transforming lives through compassion, empowerment, and service. We believe everyone has a light to shine — and when we come together, we illuminate the paths of those walking through hardship, despair, or darkness.
+        </p>
+    </div>
+
+    <!-- MISSION -->
+    <div class="card">
+        <h2><i class="fas fa-bullseye icon"></i> Our Mission</h2>
+        <p>
+            To uplift vulnerable individuals and communities by providing social, educational, emotional, and spiritual support — fostering hope, dignity, and lasting impact.
+        </p>
+    </div>
+
+    <!-- VISION -->
+    <div class="card">
+        <h2><i class="fas fa-eye icon"></i> Our Vision</h2>
+        <p>
+            A world where every person — regardless of background or circumstance — discovers their worth, walks in purpose, and becomes a light to others.
+        </p>
+    </div>
+
+</div>
+
+<div class="back">
+    <a href="/dashboard">
+        <i class="fas fa-arrow-left"></i> Back to Dashboard
+    </a>
+</div>
+
+<div class="footer">
+    © 2026 Be The Light Foundation | All Rights Reserved
+</div>
+
+</body>
+</html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Education & Skills Training | Be The Light Foundation</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background: linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.75)),
+    url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1600&q=80');
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+    color:white;
+}
+
+/* HEADER */
+.header{
+    text-align:center;
+    padding:70px 20px 40px;
+}
+
+.header h1{
+    font-size:3rem;
+    color:#FFD700;
+}
+
+.header p{
+    font-size:1.1rem;
+    opacity:0.9;
+    margin-top:10px;
+}
+
+/* MAIN CONTAINER */
+.container{
+    width:90%;
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+    gap:25px;
+    padding-bottom:60px;
+}
+
+/* HERO CARD */
+.hero{
+    background:rgba(255,255,255,.10);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,.2);
+    border-radius:20px;
+    padding:30px;
+    transition:.3s;
+}
+
+.hero:hover{
+    transform:translateY(-5px);
+    background:rgba(255,255,255,.15);
+}
+
+.hero h2{
+    color:#FFD700;
+    margin-bottom:15px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.hero p{
+    line-height:1.8;
+    opacity:0.95;
+}
+
+/* FEATURE BOXES */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:20px;
+}
+
+.box{
+    background:rgba(255,255,255,.10);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,.2);
+    border-radius:18px;
+    padding:25px;
+    transition:.3s;
+}
+
+.box:hover{
+    transform:translateY(-6px);
+    background:rgba(255,255,255,.15);
+}
+
+.box i{
+    font-size:30px;
+    color:#FFD700;
+    margin-bottom:15px;
+}
+
+.box h3{
+    color:#FFD700;
+    margin-bottom:10px;
+}
+
+.box p{
+    font-size:0.95rem;
+    line-height:1.6;
+    opacity:0.9;
+}
+
+/* IMAGE SECTION */
+.image-section{
+    margin-top:10px;
+    border-radius:20px;
+    overflow:hidden;
+    border:1px solid rgba(255,255,255,.2);
+}
+
+.image-section img{
+    width:100%;
+    height:320px;
+    object-fit:cover;
+}
+
+/* BACK BUTTON */
+.back{
+    text-align:center;
+    margin-top:30px;
+}
+
+.back a{
+    background:#FFD700;
+    color:black;
+    text-decoration:none;
+    padding:12px 30px;
+    border-radius:50px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.back a:hover{
+    background:white;
+}
+
+/* FOOTER */
+.footer{
+    text-align:center;
+    padding:20px;
+    background:rgba(0,0,0,.4);
+    margin-top:40px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    .header h1{
+        font-size:2.2rem;
+    }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="header">
+    <h1>Education & Skills Training</h1>
+    <p>Empowering individuals through knowledge, skills, and opportunity</p>
+</div>
+
+<div class="container">
+
+    <!-- INTRO -->
+    <div class="hero">
+        <h2><i class="fas fa-graduation-cap"></i> Our Education Program</h2>
+        <p>
+            At Be The Light Foundation, we believe education is the strongest tool for transformation.
+            We provide opportunities that help individuals break the cycle of poverty, gain skills,
+            and build a brighter future through learning and empowerment.
+        </p>
+    </div>
+
+    <!-- FEATURES -->
+    <div class="grid">
+
+        <div class="box">
+            <i class="fas fa-book-open"></i>
+            <h3>Sponsorships & Bursaries</h3>
+            <p>
+                We support learners in need by offering scholarships and bursaries to ensure access to quality education regardless of financial background.
+            </p>
+        </div>
+
+        <div class="box">
+            <i class="fas fa-tools"></i>
+            <h3>Vocational Training</h3>
+            <p>
+                We provide practical training for school dropouts and single mothers, helping them acquire hands-on skills for employment and self-reliance.
+            </p>
+        </div>
+
+        <div class="box">
+            <i class="fas fa-laptop-code"></i>
+            <h3>Digital Skills Empowerment</h3>
+            <p>
+                We train youth in digital literacy, computer skills, and online opportunities to prepare them for the modern digital economy.
+            </p>
+        </div>
+
+        <div class="box">
+            <i class="fas fa-paint-brush"></i>
+            <h3>Creative Skills Development</h3>
+            <p>
+                We nurture creativity in areas like design, media, writing, and arts to help individuals turn talent into income-generating opportunities.
+            </p>
+        </div>
+
+    </div>
+
+    <!-- IMAGE -->
+    <div class="image-section">
+        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1600&q=80">
+    </div>
+
+</div>
+
+<div class="back">
+    <a href="/dashboard">
+        <i class="fas fa-arrow-left"></i> Back to Dashboard
+    </a>
+</div>
+
+<div class="footer">
+    © 2026 Be The Light Foundation | Education Builds the Future
+</div>
+
+</body>
+</html>

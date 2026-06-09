@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mental Health & Wellness | Be The Light Foundation</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background: linear-gradient(rgba(20,0,40,.85),rgba(0,0,0,.9)),
+    url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=1600&q=80');
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+    color:white;
+}
+
+/* HEADER */
+.header{
+    text-align:center;
+    padding:70px 20px 30px;
+}
+
+.header h1{
+    font-size:3rem;
+    color:#c77dff;
+}
+
+.header p{
+    opacity:0.85;
+    margin-top:10px;
+}
+
+/* CONTAINER */
+.container{
+    width:90%;
+    max-width:1100px;
+    margin:auto;
+    padding-bottom:60px;
+}
+
+/* INFO BOX */
+.box{
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,.2);
+    border-radius:18px;
+    padding:25px;
+    margin-bottom:25px;
+    transition:.3s;
+}
+
+.box:hover{
+    transform:translateY(-5px);
+    background:rgba(255,255,255,.12);
+}
+
+.box h2{
+    color:#c77dff;
+    margin-bottom:10px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.box p{
+    line-height:1.7;
+    opacity:0.9;
+}
+
+/* IMAGES */
+.image-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:15px;
+    margin-top:15px;
+}
+
+.image-grid img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    border-radius:12px;
+    border:2px solid #c77dff;
+}
+
+/* GAME SECTION */
+.game{
+    text-align:center;
+}
+
+.breathe{
+    width:200px;
+    height:200px;
+    margin:20px auto;
+    background:#c77dff;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:bold;
+    font-size:18px;
+    cursor:pointer;
+    transition:all 1s ease;
+}
+
+.breathe.active{
+    transform:scale(1.5);
+    background:#9d4edd;
+}
+
+/* BUTTON */
+.btn{
+    background:#c77dff;
+    color:black;
+    padding:12px 25px;
+    border:none;
+    border-radius:30px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:white;
+}
+
+/* BACK */
+.back{
+    text-align:center;
+    margin-top:30px;
+}
+
+.back a{
+    background:#c77dff;
+    color:black;
+    text-decoration:none;
+    padding:12px 30px;
+    border-radius:50px;
+    font-weight:bold;
+}
+
+/* FOOTER */
+.footer{
+    text-align:center;
+    padding:20px;
+    background:rgba(0,0,0,.5);
+    margin-top:40px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    .header h1{
+        font-size:2.2rem;
+    }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="header">
+    <h1>Mental Health & Wellness</h1>
+    <p>Creating safe spaces for healing, expression, and emotional strength</p>
+</div>
+
+<div class="container">
+
+    <!-- AWARENESS -->
+    <div class="box">
+        <h2><i class="fas fa-brain"></i> Mental Health Awareness Campaigns</h2>
+        <p>
+            We run awareness programs to educate communities about stress, depression, anxiety,
+            and emotional wellbeing. Our goal is to break stigma and encourage open conversations.
+        </p>
+    </div>
+
+    <!-- SUPPORT -->
+    <div class="box">
+        <h2><i class="fas fa-hands-helping"></i> Peer & Professional Support</h2>
+        <p>
+            We connect individuals with peer support groups and professional counselors
+            to ensure no one goes through emotional struggles alone.
+        </p>
+    </div>
+
+    <!-- SAFE SPACE -->
+    <div class="box">
+        <h2><i class="fas fa-heart"></i> Safe Spaces & Expression Forums</h2>
+        <p>
+            We provide safe environments where individuals can freely express emotions,
+            share experiences, and heal without judgment.
+        </p>
+
+        <div class="image-grid">
+            <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773">
+            <img src="https://images.unsplash.com/photo-1520975928316-56b1d9b0b4f2">
+            <img src="https://images.unsplash.com/photo-1506784365847-bbad939e9335">
+        </div>
+    </div>
+
+    <!-- MENTAL RELEASE GAME -->
+    <div class="box game">
+        <h2><i class="fas fa-spa"></i> Stress Release Game</h2>
+        <p>Click the circle and follow breathing rhythm to relax your mind</p>
+
+        <div class="breathe" onclick="breatheGame()" id="circle">
+            CLICK & BREATHE
+        </div>
+
+        <button class="btn" onclick="resetGame()">Reset</button>
+    </div>
+
+</div>
+
+<div class="back">
+    <a href="/dashboard">
+        <i class="fas fa-arrow-left"></i> Back to Dashboard
+    </a>
+</div>
+
+<div class="footer">
+    © 2026 Be The Light Foundation | Healing Minds, Restoring Hope
+</div>
+
+<script>
+
+let active = false;
+
+function breatheGame(){
+    let circle = document.getElementById("circle");
+
+    if(!active){
+        circle.classList.add("active");
+        circle.innerHTML = "INHALE... EXHALE...";
+        active = true;
+    } else {
+        circle.classList.remove("active");
+        circle.innerHTML = "CLICK & BREATHE";
+        active = false;
+    }
+}
+
+function resetGame(){
+    let circle = document.getElementById("circle");
+    circle.classList.remove("active");
+    circle.innerHTML = "CLICK & BREATHE";
+    active = false;
+}
+
+</script>
+
+</body>
+</html>
