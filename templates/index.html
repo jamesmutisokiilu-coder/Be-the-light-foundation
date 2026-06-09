@@ -1,1 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Be The Light Foundation</title>
 
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:
+    linear-gradient(rgba(0,0,0,0.65),
+    rgba(0,0,0,0.65)),
+    url('https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1600&q=80');
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+.container{
+    text-align:center;
+    color:white;
+    width:90%;
+    max-width:800px;
+    padding:40px;
+}
+
+.logo{
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    margin:auto;
+    background:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+    box-shadow:0 0 30px rgba(255,215,0,0.6);
+}
+
+.logo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+h1{
+    margin-top:25px;
+    font-size:3rem;
+    color:#FFD700;
+    text-shadow:2px 2px 10px rgba(0,0,0,0.5);
+}
+
+.motto{
+    margin-top:15px;
+    font-size:1.4rem;
+    font-style:italic;
+    color:#ffffff;
+}
+
+.description{
+    margin-top:25px;
+    line-height:1.8;
+    font-size:1.1rem;
+    color:#f5f5f5;
+}
+
+.buttons{
+    margin-top:40px;
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    padding:15px 40px;
+    border:none;
+    border-radius:50px;
+    font-size:18px;
+    font-weight:bold;
+    text-decoration:none;
+    transition:0.4s;
+}
+
+.login{
+    background:#0d47a1;
+    color:white;
+}
+
+.login:hover{
+    background:#1565c0;
+    transform:translateY(-4px);
+}
+
+.register{
+    background:#FFD700;
+    color:#000;
+}
+
+.register:hover{
+    background:#ffea00;
+    transform:translateY(-4px);
+}
+
+.footer{
+    margin-top:40px;
+    color:#ddd;
+    font-size:15px;
+}
+
+@media(max-width:768px){
+
+    h1{
+        font-size:2rem;
+    }
+
+    .motto{
+        font-size:1.1rem;
+    }
+
+    .description{
+        font-size:1rem;
+    }
+
+    .btn{
+        width:220px;
+    }
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Replace logo.png with your logo -->
+    <div class="logo">
+        <img src="/static/images/logo.png">
+    </div>
+
+    <h1>BE THE LIGHT FOUNDATION</h1>
+
+    <p class="motto">
+        "Uplifting Others, Reaching Higher"
+    </p>
+
+    <p class="description">
+        Transforming lives through compassion, empowerment, service,
+        education, mental wellness, youth development and spiritual growth.
+        Together, we become a light that shines hope into our communities.
+    </p>
+
+    <div class="buttons">
+        <a href="/login" class="btn login">Login</a>
+        <a href="/register" class="btn register">Register</a>
+    </div>
+
+    <div class="footer">
+        © 2026 Be The Light Foundation | Empowering Communities Through Hope
+    </div>
+
+</div>
+
+</body>
+</html>
