@@ -11,10 +11,22 @@ app = Flask(__name__)
 
 app.secret_key = os.environ.get("SECRET_KEY", "btlf_secret_key")
 
-BASE_DIR = os.path.abspath(os.path.dirname(__file__))
-DB_PATH = os.path.join(BASE_DIR, "btlf.db")
+# =========================
+# DATABASE (RENDER + LOCAL SAFE)
+# =========================
 
-app.config["SQLALCHEMY_DATABASE_URI"] = f"sqlite:///{DB_PATH}"
+database_url = os.getenv("DATABASE_URL")
+
+if database_url:
+    # Fix for Render PostgreSQL
+    database_url = database_url.replace("postgres://", "postgresql://")
+    app.config["SQLALCHEMY_DATABASE_URI"] = database_url
+else:
+    # fallback local SQLite
+    BASE_DIR = os.path.abspath(os.path.dirname(__file__))
+    DB_PATH = os.path.join(BASE_DIR, "btlf.db")
+    app.config["SQLALCHEMY_DATABASE_URI"] = f"sqlite:///{DB_PATH}"
+
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
 db = SQLAlchemy(app)
@@ -40,7 +52,6 @@ class Message(db.Model):
     email = db.Column(db.String(120), nullable=False)
     phone = db.Column(db.String(20), nullable=False)
     content = db.Column(db.Text, nullable=False)
-
 
 # =========================
 # PUBLIC PAGES
@@ -100,7 +111,6 @@ def spiritual():
 def assistant():
     return render_template("assistant.html")
 
-
 # =========================
 # REGISTER
 # =========================
@@ -134,7 +144,6 @@ def register():
 
     return render_template("register.html")
 
-
 # =========================
 # LOGIN
 # =========================
@@ -152,16 +161,14 @@ def login():
         if user and check_password_hash(user.password, password):
             session["user_id"] = user.id
             session["username"] = user.username
-
             return redirect(url_for("dashboard"))
 
         return "Invalid login details"
 
     return render_template("login.html")
 
-
 # =========================
-# USER DASHBOARD
+# DASHBOARD
 # =========================
 
 @app.route("/dashboard")
@@ -172,9 +179,8 @@ def dashboard():
 
     return render_template("dashboard.html")
 
-
 # =========================
-# ASSISTANT MESSAGE SYSTEM
+# MESSAGE SYSTEM
 # =========================
 
 @app.route("/send-message", methods=["POST"])
@@ -192,14 +198,12 @@ def send_message():
 
     return redirect(url_for("assistant"))
 
-
 # =========================
 # ADMIN LOGIN
 # =========================
 
 ADMIN_USERNAME = "kutosi123"
 ADMIN_PASSWORD = "empowerment"
-
 
 @app.route("/admin-login", methods=["GET", "POST"])
 def admin_login():
@@ -216,7 +220,6 @@ def admin_login():
         return "Invalid admin credentials"
 
     return render_template("admin_login.html")
-
 
 # =========================
 # ADMIN DASHBOARD
@@ -237,31 +240,20 @@ def admin_dashboard():
         messages=messages
     )
 
-
 # =========================
-# ADMIN LOGOUT
+# LOGOUTS
 # =========================
 
 @app.route("/admin-logout")
 def admin_logout():
-
     session.pop("admin", None)
-
     return redirect(url_for("admin_login"))
-
-
-# =========================
-# USER LOGOUT
-# =========================
 
 @app.route("/logout")
 def logout():
-
     session.pop("user_id", None)
     session.pop("username", None)
-
     return redirect(url_for("login"))
-
 
 # =========================
 # CREATE DATABASE
@@ -269,7 +261,6 @@ def logout():
 
 with app.app_context():
     db.create_all()
-
 
 # =========================
 # RUN APP
