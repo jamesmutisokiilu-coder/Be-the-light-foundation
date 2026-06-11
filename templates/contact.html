@@ -44,7 +44,7 @@ body{
 
 .container{
     width:90%;
-    max-width:800px;
+    max-width:1000px;
     margin:auto;
     display:grid;
     grid-template-columns:1fr;
@@ -108,16 +108,19 @@ body{
     transform:translateY(-3px);
 }
 
-/* Passport Photo Styling */
+/* Team Images Section */
 
 .image-box{
     margin-top:35px;
     display:flex;
     justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
 }
 
 .profile-card{
     text-align:center;
+    width:180px;
 }
 
 .profile-card img{
@@ -131,7 +134,7 @@ body{
 }
 
 .profile-card img:hover{
-    transform:scale(1.03);
+    transform:scale(1.05);
 }
 
 .profile-card h3{
@@ -187,6 +190,10 @@ body{
         width:150px;
         height:190px;
     }
+
+    .profile-card{
+        width:150px;
+    }
 }
 
 </style>
@@ -236,14 +243,28 @@ body{
             <a href="#"><i class="fab fa-linkedin"></i></a>
         </div>
 
-        <!-- Passport Sized Photo -->
+        <!-- Team Members -->
 
         <div class="image-box">
+
             <div class="profile-card">
                 <img src="/static/images/img3.jpeg" alt="Foundation Manager">
                 <h3>Foundation Manager</h3>
                 <p>Be The Light Foundation</p>
             </div>
+
+            <div class="profile-card">
+                <img src="/static/images/img4.jpeg" alt="Program Coordinator">
+                <h3>Program Coordinator</h3>
+                <p>Community Outreach</p>
+            </div>
+
+            <div class="profile-card">
+                <img src="/static/images/img5.jpeg" alt="Volunteer Leader">
+                <h3>Volunteer Leader</h3>
+                <p>Youth Empowerment</p>
+            </div>
+
         </div>
 
     </div>
